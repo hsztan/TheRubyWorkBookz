@@ -1,19 +1,18 @@
-name: Test
+name: Ruby Minitest
 
 on: [push]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.0
       - name: Install dependencies
-        run: |
-          gem install bundler --install-dir /home/runner
-          bundle install --install-dir /home/runner
-      - name: Set PATH
-        run: |
-          echo 'export PATH="/home/runner/.gem/ruby/3.0.0/bin:$PATH"' >> $GITHUB_ENV
+        run: gem install bundler
+        run: bundle install
       - name: Run tests
-        run: |
-          bundle exec ruby -Ilib:test test/*_test.rb
+        run: bundle exec rake test
