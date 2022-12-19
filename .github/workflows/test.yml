@@ -1,0 +1,16 @@
+name: Test exercises
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+      - name: Run tests
+        run: |
+          bundle exec ruby -Ilib:test test/*_test.rb
