@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set PATH
-        run: |
-          echo 'export PATH="/home/runner/.gem/ruby/3.0.0/bin:$PATH"' >> $GITHUB_ENV
       - name: Install dependencies
         run: |
           gem install bundler --install-dir /home/runner
           bundle install --install-dir /home/runner
+      - name: Set PATH
+        run: |
+          echo 'export PATH="/home/runner/.gem/ruby/3.0.0/bin:$PATH"' >> $GITHUB_ENV
       - name: Run tests
         run: |
           bundle exec ruby -Ilib:test test/*_test.rb
