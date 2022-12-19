@@ -1,8 +1,4 @@
-# test/vowel_removal_test.rb
-
 require 'minitest/autorun'
-require 'minitest/reporters'
-Minitest::Reporters.use!
 
 require_relative '../string_exercises'
 
