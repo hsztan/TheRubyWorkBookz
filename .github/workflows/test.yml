@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          gem install bundler
-          bundle install
+          gem install bundler --install-dir /home/runner
+          bundle install --install-dir /home/runner
       - name: Run tests
         run: |
           bundle exec ruby -Ilib:test test/*_test.rb
