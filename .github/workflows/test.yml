@@ -13,4 +13,4 @@ jobs:
           bundle install --install-dir /home/runner
       - name: Run tests
         run: |
-          bundle exec ruby -Ilib:test test/*_test.rb
+          ruby -Ilib:test test/*
