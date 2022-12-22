@@ -5,7 +5,7 @@
 # Example:
 #   sum_array([1, 2, 3, 4, 5]) => 15
 def sum_array(array)
-  # Your code here
+  # WRITE YOUR CODE HERE
 end
 
 # Exercise 2
@@ -15,7 +15,7 @@ end
 # Example:
 #   modify_array { |x| x + 1 } => [2, 3, 4]
 def modify_array(&block)
-  # Your code here
+  # WRITE YOUR CODE HERE
 end
 
 # Exercise 3
@@ -24,7 +24,7 @@ end
 #
 # Example:
 #   to_uppercase.call("hello") => "HELLO"
-# Your code here
+TO_UPPERCASE = Proc.new { # WRITE YOUR CODE HERE }
 
 # Exercise 4
 #
@@ -32,7 +32,7 @@ end
 #
 # Example:
 #   sum_lambda.call(1, 2) => 3
-# Your code here
+SUM_LAMBDA = lambda { # WRITE YOUR CODE HERE }
 
 # Exercise 5
 #
@@ -41,7 +41,7 @@ end
 # Example:
 #   transform_array(["hello", "world"], &to_uppercase) => ["HELLO", "WORLD"]
 def transform_array(array, &block)
-  # Your code here
+  # WRITE YOUR CODE HERE
 end
 
 # Exercise 6
@@ -52,7 +52,7 @@ end
 #   is_even = lambda { |x| x.even? }
 #   filter_array([1, 2, 3, 4], &is_even) => [2, 4]
 def filter_array(array, &block)
-  # Your code here
+  # WRITE YOUR CODE HERE
 end
 
 # Exercise 7
@@ -63,5 +63,5 @@ end
 #   double = lambda { |x| x * 2 }
 #   transform_and_operate(3, &double) => 6
 def transform_and_operate(input, &transform_block)
-  # Your code here
+  # WRITE YOUR CODE HERE
 end

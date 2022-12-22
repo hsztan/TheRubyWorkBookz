@@ -13,15 +13,15 @@ class ExerciseTest < Minitest::Test
   end
 
   def test_to_uppercase
-    assert_equal "HELLO", to_uppercase.call("hello")
+    assert_equal "HELLO", TO_UPPERCASE.call("hello")
   end
 
   def test_sum_lambda
-    assert_equal 3, sum_lambda.call(1, 2)
+    assert_equal 3, SUM_LAMBDA.call(1, 2)
   end
 
   def test_transform_array
-    assert_equal ["HELLO", "WORLD"], transform_array(["hello", "world"], &to_uppercase)
+    assert_equal ["HELLO", "WORLD"], transform_array(["hello", "world"], &TO_UPPERCASE)
   end
 
   def test_filter_array
