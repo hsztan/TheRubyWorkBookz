@@ -1,5 +1,6 @@
 require 'minitest/autorun'
-require_relative '../methods_procs_lambdas.rb'
+
+require_relative '../method_procs_lambdas'
 
 class ExerciseTest < Minitest::Test
   def test_sum_array
