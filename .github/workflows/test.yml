@@ -1,6 +1,9 @@
 name: Ruby Minitest
 
-on: [push]
+on:
+  push:
+    branches:
+      - '*'
 
 jobs:
   build:
